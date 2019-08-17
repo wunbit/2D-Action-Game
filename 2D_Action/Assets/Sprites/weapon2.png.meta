@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 6f20929dc9cab6741bb22430fdfdbb0d
+guid: 8386fe796c4497d4bb5deb8843d90919
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7609486996209228562
-    second: particles_0
+      213: 170523415159224400
+    second: torch_body
   - first:
-      213: -576354014268724891
-    second: particles_1
+      213: -5811340764378557870
+    second: torch_fire
   - first:
-      213: 5597564248131343736
-    second: particles_2
-  - first:
-      213: -449137561210389587
-    second: particles_3
-  - first:
-      213: -2924870240721974060
-    second: particles_4
-  - first:
-      213: 4816342424261837737
-    second: particles_5
+      213: -772714375065980905
+    second: torch_flare
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -140,127 +131,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: particles_0
+      name: torch_body
       rect:
         serializedVersion: 2
-        x: 46
-        y: 57
-        width: 112
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 40
+        y: 29
+        width: 99
+        height: 265
+      alignment: 9
+      pivot: {x: 0.5396297, y: 0.16595604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a4b2fb53cef255459c8af8da2c271a6
-      internalID: -7609486996209228562
+      spriteID: f43e3e780b2bf454bb6d1904ae98b533
+      internalID: 170523415159224400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: particles_1
+      name: torch_fire
       rect:
         serializedVersion: 2
-        x: 206
-        y: 68
-        width: 103
-        height: 89
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 347
+        width: 141
+        height: 176
+      alignment: 9
+      pivot: {x: 0.5170561, y: 0.20849401}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b08fa19f9965bda4a8ac7fe6e2244522
-      internalID: -576354014268724891
+      spriteID: 486f0c5360e5a944d8da6012ed159d21
+      internalID: -5811340764378557870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: particles_2
+      name: torch_flare
       rect:
         serializedVersion: 2
-        x: 359
-        y: 53
-        width: 123
-        height: 139
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 584
+        width: 183
+        height: 251
+      alignment: 9
+      pivot: {x: 0.51409185, y: 0.2534199}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d7c14d71d1295443ac4406cad79ce34
-      internalID: 5597564248131343736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: particles_3
-      rect:
-        serializedVersion: 2
-        x: 556
-        y: 55
-        width: 120
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c6580a050320b646b78da51d60a2874
-      internalID: -449137561210389587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: particles_4
-      rect:
-        serializedVersion: 2
-        x: 737
-        y: 76
-        width: 41
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be81d656d50567644821df1b9bddff88
-      internalID: -2924870240721974060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: particles_5
-      rect:
-        serializedVersion: 2
-        x: 833
-        y: 71
-        width: 102
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7c5770f06b1a5b4b9a639a70d0ea083
-      internalID: 4816342424261837737
+      spriteID: 0de363260110a9c4ebb34be55d58dd31
+      internalID: -772714375065980905
       vertices: []
       indices: 
       edges: []
