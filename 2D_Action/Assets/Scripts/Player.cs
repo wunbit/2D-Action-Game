@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     private float speed;
     public GameManager manager;
     private Rigidbody2D rb2d;
+    public float health;
     private Vector2 moveAmount;
     private Animator anim;
 
@@ -30,6 +31,14 @@ public class Player : MonoBehaviour
         else
         {
             anim.SetBool("isRunning", false);
+        }
+    }
+    public void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
