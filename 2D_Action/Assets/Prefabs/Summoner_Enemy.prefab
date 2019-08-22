@@ -120,6 +120,16 @@ MonoBehaviour:
   speed: 30
   timeBetweenAttacks: 2
   damage: 1
+  pickupChance: 25
+  healthChance: 40
+  pickups:
+  - {fileID: 1888061383174532111, guid: 43a50951a24f9714b9deeb6a36c3ba95, type: 3}
+  - {fileID: 6657945974775402149, guid: 5723739fe45db4544a260a9a033cc3c8, type: 3}
+  - {fileID: 5471858927315078791, guid: b9a64504fd28abc4ea40c3fd1ff6a65a, type: 3}
+  healthPickup:
+  - {fileID: 1705739028928964424, guid: 4c2db1afa8342d841a0a466d5f3555ab, type: 3}
+  - {fileID: 8230595320920849617, guid: 1f33839cc3cc81b4abcba018bc6622dd, type: 3}
+  - {fileID: 1705739028928964424, guid: 4c2db1afa8342d841a0a466d5f3555ab, type: 3}
   player: {fileID: 0}
   timeBetweenSummons: 5
   summonTime: 1
