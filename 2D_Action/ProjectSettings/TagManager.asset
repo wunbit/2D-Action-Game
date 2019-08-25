@@ -9,6 +9,8 @@ TagManager:
   - Weapon
   - Boss
   - PatrolPoint
+  - summonPoint
+  - SummonerSummonPoint
   layers:
   - Default
   - TransparentFX

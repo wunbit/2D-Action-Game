@@ -14,6 +14,7 @@ public class SummonerEnemy : Enemy
     public float maxY;
     private bool runningAway = false;
     private Vector2 targetPosition;
+    public GameObject[] summonPoints;
     private Animator anim;
     // Start is called before the first frame update
     public override void Start()
@@ -21,6 +22,7 @@ public class SummonerEnemy : Enemy
         base.Start();
         GetRandomPosition();
         anim = GetComponent<Animator>();
+        summonPoints = GameObject.FindGameObjectsWithTag("SummonerSummonPoint");
     }
 
     // Update is called once per frame
@@ -60,7 +62,8 @@ public class SummonerEnemy : Enemy
     {
         if (player != null)
         {
-            Instantiate(minion, transform.position, transform.rotation);
+            GameObject summonPoint = summonPoints[Random.Range(0, summonPoints.Length)];
+            Instantiate(minion, summonPoint.transform.position, summonPoint.transform.rotation);
         }
     }
 

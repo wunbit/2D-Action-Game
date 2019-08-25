@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public Transform player;
     
-    public void TakeDamage(int damageAmount)
+    public virtual void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
         if (health <= 0)

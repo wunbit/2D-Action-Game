@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68151643b6a11b41b2ae03f47716ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 3577291981300656330, guid: db0cf1af24a2b1349a3cbfd443029186, type: 3}
+  boss: {fileID: 7503295686266648504, guid: db0cf1af24a2b1349a3cbfd443029186, type: 3}
   bossSpawnPoint: {fileID: 1332042862}
   waves:
   - enemies:
@@ -2731,7 +2731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361775701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.05688, y: 17.055223, z: 24.627823}
+  m_LocalPosition: {x: 11.8, y: 13.5, z: 24.627823}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 980438663}
