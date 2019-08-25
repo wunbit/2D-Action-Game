@@ -38,7 +38,6 @@ public class MeleeEnemy : Enemy
 //test make it so that instead of the function, it does damage on Contact.
     IEnumerator Attack()
     {
-        player.GetComponent<Player>().TakeDamage(damage);
         Vector2 originalPosition = transform.position;
         Vector2 targetPosition = player.position;
         float percent = 0;

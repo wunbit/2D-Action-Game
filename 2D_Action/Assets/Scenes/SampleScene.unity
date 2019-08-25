@@ -856,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &514836543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68151643b6a11b41b2ae03f47716ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 7503295686266648504, guid: db0cf1af24a2b1349a3cbfd443029186, type: 3}
+  boss: {fileID: 4880840964296503937, guid: db0cf1af24a2b1349a3cbfd443029186, type: 3}
   bossSpawnPoint: {fileID: 1332042862}
   waves:
   - enemies:

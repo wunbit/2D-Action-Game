@@ -9,18 +9,25 @@ public class BossEnemy : Enemy
     public float attackSpeed;
     public float chaseSpeed;
     public Enemy[] enemies;
+    public int halfhealth;
     public GameObject[] summonPoints;
+    private Animator anim;
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         summonPoints = GameObject.FindGameObjectsWithTag("summonPoint");
-        Debug.Log(summonPoints);
+        anim = GetComponent<Animator>();
+        halfhealth = health / 2;
     }
 
     public override void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
+        if (health <= halfhealth)
+        {
+            anim.SetTrigger("Stage2");
+        }
         //UpdateHealthUI(health);
         if (health <= 0)
         {
@@ -51,7 +58,6 @@ public class BossEnemy : Enemy
 
     IEnumerator Attack()
     {
-        player.GetComponent<Player>().TakeDamage(damage);
         Vector2 originalPosition = transform.position;
         Vector2 targetPosition = player.position;
         float percent = 0;

@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 80
-  lifeTime: 0.5
+  lifeTime: 0.8
   damage: 1
   explosion: {fileID: 6359084939064248114, guid: 719c747647791de4ab5c3c73bd14d044,
     type: 3}
