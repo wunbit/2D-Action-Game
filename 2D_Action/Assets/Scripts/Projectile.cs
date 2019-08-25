@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Enemy")
+        if (col.tag == "Enemy" || col.tag == "Boss")
         {
             col.GetComponent<Enemy>().TakeDamage(damage);
             DestroyProjectile();

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeEnemy : Enemy
+public class BossEnemy : Enemy
 {
-    public float stopDistance;
+    public float attackDistance;
     public float attackTime;
     public float attackSpeed;
     // Start is called before the first frame update
@@ -12,19 +12,14 @@ public class MeleeEnemy : Enemy
     {
         base.Start();
     }
-
     // Update is called once per frame
     void Update()
     {
         if (player != null)
         {
-            //float distanceCheck = Vector2.Distance(transform.position, player.position);
-            //Debug.Log(distanceCheck);
-            if (Vector2.Distance(transform.position, player.position) > stopDistance)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            }
-            else
+            float distancetoplayer = Vector2.Distance(transform.position, player.position);
+            Debug.Log(distancetoplayer);
+            if (Vector2.Distance(transform.position, player.position) < attackDistance)
             {
                 if (Time.time >= attackTime)
                 {
@@ -35,7 +30,6 @@ public class MeleeEnemy : Enemy
         }
     }
 
-//test make it so that instead of the function, it does damage on Contact.
     IEnumerator Attack()
     {
         player.GetComponent<Player>().TakeDamage(damage);

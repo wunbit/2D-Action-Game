@@ -25,26 +25,26 @@ public class Enemy : MonoBehaviour
             int randomHealthNumber = Random.Range(0, 101);
             int randomNumberdecider = Random.Range(0,101)+ pickupChance;
             int randomHealthNumberdecider = Random.Range(0, 101) + healthChance;
-            Debug.Log(randomNumber);
-            Debug.Log(randomHealthNumber);
-            Debug.Log(randomNumberdecider);
-            Debug.Log(randomHealthNumberdecider);
+            //Debug.Log(randomNumber);
+            //Debug.Log(randomHealthNumber);
+            //Debug.Log(randomNumberdecider);
+            //Debug.Log(randomHealthNumberdecider);
             if (randomNumberdecider >= randomHealthNumberdecider)
             {
-                Debug.Log("pickup is bigger than health");
+                //Debug.Log("pickup is bigger than health");
                 if (randomNumber < pickupChance)
                 {
-                    Debug.Log("it should drop an item");
+                    //Debug.Log("it should drop an item");
                     GameObject randomPickup = pickups[Random.Range(0, pickups.Length)];
                     Instantiate(randomPickup, transform.position, transform.rotation);
                 }
             }
             if (randomNumberdecider < randomHealthNumberdecider)
             {
-                Debug.Log("pickup is smaller than health");
+                //Debug.Log("pickup is smaller than health");
                 if (randomHealthNumber < healthChance)
                 {
-                    Debug.Log("health should drop");
+                    //Debug.Log("health should drop");
                     GameObject randomHealth = healthPickup[Random.Range(0, pickups.Length)];
                     Instantiate(randomHealth, transform.position, transform.rotation);
                 }
