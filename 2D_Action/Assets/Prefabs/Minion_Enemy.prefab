@@ -609,12 +609,17 @@ MonoBehaviour:
   speed: 25
   timeBetweenAttacks: 2
   damage: 1
-  pickupChance: 0
-  healthChance: 0
+  pickupChance: 10
+  healthChance: 20
   pickups:
+  - {fileID: 6657945974775402149, guid: 5723739fe45db4544a260a9a033cc3c8, type: 3}
   - {fileID: 6657945974775402149, guid: 5723739fe45db4544a260a9a033cc3c8, type: 3}
   healthPickup:
   - {fileID: 8230595320920849617, guid: 1f33839cc3cc81b4abcba018bc6622dd, type: 3}
+  - {fileID: 8230595320920849617, guid: 1f33839cc3cc81b4abcba018bc6622dd, type: 3}
+  deathEffect: {fileID: 5481314410399738263, guid: 9d9adb05b873126418d865524e33a645,
+    type: 3}
+  splat: {fileID: 4198670363709717871, guid: f3638a156720b6e47bd19ec1d68af12d, type: 3}
   player: {fileID: 0}
   stopDistance: 10
   attackTime: 1

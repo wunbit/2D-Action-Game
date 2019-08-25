@@ -722,9 +722,12 @@ MonoBehaviour:
   - {fileID: 1705739028928964424, guid: 4c2db1afa8342d841a0a466d5f3555ab, type: 3}
   - {fileID: 8230595320920849617, guid: 1f33839cc3cc81b4abcba018bc6622dd, type: 3}
   - {fileID: 1705739028928964424, guid: 4c2db1afa8342d841a0a466d5f3555ab, type: 3}
+  deathEffect: {fileID: 5481314410399738263, guid: 9d9adb05b873126418d865524e33a645,
+    type: 3}
+  splat: {fileID: 4198670363709717871, guid: f3638a156720b6e47bd19ec1d68af12d, type: 3}
   player: {fileID: 0}
   timeBetweenSummons: 5
-  summonTime: 1
+  summonTime: 2
   distancetoEscape: 30
   minion: {fileID: 5852864798646980828, guid: fa193e535810618468cf70ba243a9eef, type: 3}
   minX: -120

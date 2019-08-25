@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     public int healthChance;
     public GameObject[] pickups;
     public GameObject[] healthPickup;
+    public GameObject deathEffect;
+    public GameObject splat;
 
     [HideInInspector]
     public Transform player;
@@ -49,6 +51,8 @@ public class Enemy : MonoBehaviour
                     Instantiate(randomHealth, transform.position, transform.rotation);
                 }
             }
+            Instantiate(splat, transform.position, transform.rotation);
+            Instantiate(deathEffect, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

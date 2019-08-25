@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public Transform weaponPoint;
 
     private Vector2 moveAmount;
     private Animator anim;
@@ -42,7 +43,7 @@ public class Player : MonoBehaviour
     public void ChangeWeapon(Weapon weaponToEquip)
     {
         Destroy(GameObject.FindGameObjectWithTag("Weapon"));
-        Instantiate(weaponToEquip, transform.position, transform.rotation, transform);
+        Instantiate(weaponToEquip, weaponPoint.position, weaponPoint.rotation, weaponPoint);
     }
 
     // Update is called once per frame

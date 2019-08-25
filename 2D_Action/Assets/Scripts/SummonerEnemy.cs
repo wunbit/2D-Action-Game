@@ -28,9 +28,10 @@ public class SummonerEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        float distancetoplayer = Vector2.Distance(transform.position, player.position);
+        
         if (player != null)
         {
+            float distancetoplayer = Vector2.Distance(transform.position, player.position);
             if (distancetoplayer > distancetoEscape || runningAway)
             {
                 if (Vector2.Distance(transform.position, targetPosition) > 0.5f)
@@ -60,7 +61,7 @@ public class SummonerEnemy : Enemy
 
     public void Summon()
     {
-        if (player != null)
+        if (player != null && summonPoints != null)
         {
             GameObject summonPoint = summonPoints[Random.Range(0, summonPoints.Length)];
             Instantiate(minion, summonPoint.transform.position, summonPoint.transform.rotation);

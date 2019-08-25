@@ -451,6 +451,9 @@ MonoBehaviour:
   healthChance: 0
   pickups: []
   healthPickup: []
+  deathEffect: {fileID: 5481314410399738263, guid: 9d9adb05b873126418d865524e33a645,
+    type: 3}
+  splat: {fileID: 4198670363709717871, guid: f3638a156720b6e47bd19ec1d68af12d, type: 3}
   player: {fileID: 0}
   attackDistance: 25
   attackTime: 2
