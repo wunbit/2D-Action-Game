@@ -856,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &514836543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,8 +874,29 @@ MonoBehaviour:
   waves:
   - enemies:
     - {fileID: 2355720950364078944, guid: 61828786de790d5468389c29e0971982, type: 3}
-    count: 2
+    count: 5
+    timeBetweenSpawns: 2
+  - enemies:
+    - {fileID: 2355720950364078944, guid: 61828786de790d5468389c29e0971982, type: 3}
+    - {fileID: 5852864798646980828, guid: fa193e535810618468cf70ba243a9eef, type: 3}
+    count: 10
+    timeBetweenSpawns: 1.5
+  - enemies:
+    - {fileID: 2355720950364078944, guid: 61828786de790d5468389c29e0971982, type: 3}
+    - {fileID: 6953498969745007632, guid: 57a267ed2aac42a468da783640f77104, type: 3}
+    count: 12
+    timeBetweenSpawns: 1.2
+  - enemies:
+    - {fileID: 3301798020237146092, guid: cb863a45edfc07f439052d20965af662, type: 3}
+    - {fileID: 6953498969745007632, guid: 57a267ed2aac42a468da783640f77104, type: 3}
+    count: 15
     timeBetweenSpawns: 1
+  - enemies:
+    - {fileID: 2355720950364078944, guid: 61828786de790d5468389c29e0971982, type: 3}
+    - {fileID: 3301798020237146092, guid: cb863a45edfc07f439052d20965af662, type: 3}
+    - {fileID: 6953498969745007632, guid: 57a267ed2aac42a468da783640f77104, type: 3}
+    count: 20
+    timeBetweenSpawns: 0.8
   spawnPoints:
   - {fileID: 1754965606}
   - {fileID: 1316205915}
