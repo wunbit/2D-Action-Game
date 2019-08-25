@@ -11,6 +11,7 @@ TagManager:
   - PatrolPoint
   - summonPoint
   - SummonerSummonPoint
+  - BossExplosionPoint
   layers:
   - Default
   - TransparentFX

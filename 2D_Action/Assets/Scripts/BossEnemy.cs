@@ -11,12 +11,14 @@ public class BossEnemy : Enemy
     public Enemy[] enemies;
     public int halfhealth;
     public GameObject[] summonPoints;
+    public GameObject explosionPoint;
     private Animator anim;
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         summonPoints = GameObject.FindGameObjectsWithTag("summonPoint");
+        explosionPoint = GameObject.FindGameObjectWithTag("BossExplosionPoint");
         anim = GetComponent<Animator>();
         halfhealth = health / 2;
     }
@@ -31,6 +33,8 @@ public class BossEnemy : Enemy
         //UpdateHealthUI(health);
         if (health <= 0)
         {
+            Instantiate(deathEffect, explosionPoint.transform.position, explosionPoint.transform.rotation);
+            Instantiate(splat, explosionPoint.transform.position, explosionPoint.transform.rotation);
             Destroy(gameObject);
         }
         Enemy randomEnemy = enemies[Random.Range(0, enemies.Length)];

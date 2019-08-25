@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public Transform weaponPoint;
-
+    public GameObject lifeUpEffect;
     private Vector2 moveAmount;
     private Animator anim;
 
@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
 
     void UpdateHealthUI(int currentHealth)
     {
+        Instantiate(lifeUpEffect, transform.position, transform.rotation);
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < currentHealth)
