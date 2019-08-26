@@ -7,7 +7,7 @@ public class PatrolBehaviour : StateMachineBehaviour
     private GameObject[] patrolPoints;
     int randomPoint;
     private float speed;
-    public BossEnemy boss;
+    private BossEnemy boss;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

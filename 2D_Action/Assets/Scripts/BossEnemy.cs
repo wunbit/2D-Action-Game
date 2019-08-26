@@ -9,9 +9,9 @@ public class BossEnemy : Enemy
     public float attackSpeed;
     public float chaseSpeed;
     public Enemy[] enemies;
-    public int halfhealth;
-    public GameObject[] summonPoints;
-    public GameObject explosionPoint;
+    private int halfhealth;
+    private GameObject[] summonPoints;
+    private GameObject explosionPoint;
     private Animator anim;
     // Start is called before the first frame update
     public override void Start()
@@ -47,10 +47,11 @@ public class BossEnemy : Enemy
     {
         if (player != null)
         {
-            float distancetoplayer = Vector2.Distance(transform.position, player.position);
+            //float distancetoplayer = Vector2.Distance(transform.position, player.position);
             //Debug.Log(distancetoplayer);
             if (Vector2.Distance(transform.position, player.position) < attackDistance)
             {
+                Debug.Log("Player is Close to attack");
                 if (Time.time >= attackTime)
                 {
                     StartCoroutine(Attack());

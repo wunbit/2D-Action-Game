@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    private float speed;
-    public GameManager manager;
+    public float speed;
     private Rigidbody2D rb2d;
     public int health;
     public Image[] hearts;
@@ -22,12 +21,10 @@ public class Player : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        speed = manager.playerSpeed;
     }
 
     void UpdateHealthUI(int currentHealth)
     {
-        Instantiate(lifeUpEffect, transform.position, transform.rotation);
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < currentHealth)
@@ -73,6 +70,7 @@ public class Player : MonoBehaviour
 
     public void HealPlayer(int healAmount)
     {
+        Instantiate(lifeUpEffect, transform.position, transform.rotation);
         if ((health + healAmount) > 5)
         {
             health = 5;
