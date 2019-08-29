@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    CameraController cam;
     public GameObject projectile;
     public Transform shotPoint;
+    Vector2 direction;
     public float timeBetweenShots;
     private float shotTime;
+    public float shakeMag = 1.5f;
+    public float shakeLenght = 0.05f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam = FindObjectOfType<CameraController>();
     }
 
     // Update is called once per frame
@@ -28,6 +32,9 @@ public class Weapon : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 shotTime = Time.time + timeBetweenShots;
+                direction.x = transform.position.x - 0.5f;
+                direction.y = transform.position.y - 0.5f;
+                cam.Shake((transform.position - shotPoint.position).normalized, shakeMag, shakeLenght);
             }
         }
     }

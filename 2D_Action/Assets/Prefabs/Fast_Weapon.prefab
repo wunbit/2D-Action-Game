@@ -129,3 +129,5 @@ MonoBehaviour:
     type: 3}
   shotPoint: {fileID: 7768626180006960706}
   timeBetweenShots: 0.2
+  shakeMag: 3
+  shakeLenght: 0.1

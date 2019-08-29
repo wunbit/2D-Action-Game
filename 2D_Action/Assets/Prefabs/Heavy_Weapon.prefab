@@ -99,6 +99,8 @@ MonoBehaviour:
     type: 3}
   shotPoint: {fileID: 5977922399856579124}
   timeBetweenShots: 1
+  shakeMag: 8
+  shakeLenght: 0.08
 --- !u!1 &4224980455624638603
 GameObject:
   m_ObjectHideFlags: 0

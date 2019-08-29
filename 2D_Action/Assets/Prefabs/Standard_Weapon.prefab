@@ -278,10 +278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bdee5a05d0681e4f81091f85a6883d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guntip: {fileID: 0}
   projectile: {fileID: 5552669561683687522, guid: e976609dcd206984e871bdf49e5a534a,
     type: 3}
   shotPoint: {fileID: 8212793898951838936}
   timeBetweenShots: 0.6
+  shakeMag: 3
+  shakeLenght: 0.05
 --- !u!1 &8212793898951838937
 GameObject:
   m_ObjectHideFlags: 0

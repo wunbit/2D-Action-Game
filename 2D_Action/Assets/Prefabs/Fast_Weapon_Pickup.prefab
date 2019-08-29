@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponToEquip: {fileID: 7768626180664683470, guid: 4010645ec2307f54487c65cac5c1520c,
     type: 3}
-  timeToDestroy: 4
+  timeToDestroy: 10
 --- !u!82 &-3740805585529785525
 AudioSource:
   m_ObjectHideFlags: 0

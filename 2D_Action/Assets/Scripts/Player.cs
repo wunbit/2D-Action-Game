@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    private AudioSource source;
     public float speed;
     private Rigidbody2D rb2d;
     public int health;
@@ -14,6 +15,7 @@ public class Player : MonoBehaviour
     public Transform weaponPoint;
     public GameObject lifeUpEffect;
     private Vector2 moveAmount;
+    public Animator hurtFlash;
     private Animator anim;
 
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     void UpdateHealthUI(int currentHealth)
@@ -61,6 +64,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
+        source.Play();
+        hurtFlash.SetTrigger("HurtPanelFlash");
         UpdateHealthUI(health);
         if (health <= 0)
         {

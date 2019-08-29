@@ -12,6 +12,7 @@ public class WaveSpawner : MonoBehaviour
         public float timeBetweenSpawns;
     }
     public GameObject boss;
+    public GameObject healthBar;
     public Transform bossSpawnPoint;
     public Wave[] waves;
     public Transform[] spawnPoints;
@@ -68,6 +69,7 @@ public class WaveSpawner : MonoBehaviour
             else
             {
                 Instantiate(boss, bossSpawnPoint.position, bossSpawnPoint.rotation);
+                healthBar.SetActive(true);
             }
         }
     }

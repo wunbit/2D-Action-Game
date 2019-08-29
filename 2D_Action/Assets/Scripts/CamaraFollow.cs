@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//So i can delcare multiple variables with commas
 public class CamaraFollow : MonoBehaviour
 {
     public Transform playerTransform;
@@ -15,9 +15,8 @@ public class CamaraFollow : MonoBehaviour
     {
         transform.position = playerTransform.position;
     }
-
     // Update is called once per frame
-    void Update()
+void Update()
     {
         if (playerTransform != null)
         {
@@ -26,4 +25,5 @@ public class CamaraFollow : MonoBehaviour
             transform.position = Vector2.Lerp(transform.position, new Vector2(clampedX, clampedY), speed);
         }
     }
+
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossEnemy : Enemy
 {
@@ -13,6 +14,7 @@ public class BossEnemy : Enemy
     private GameObject[] summonPoints;
     private GameObject explosionPoint;
     private Animator anim;
+    private Slider healthBar;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -21,11 +23,15 @@ public class BossEnemy : Enemy
         explosionPoint = GameObject.FindGameObjectWithTag("BossExplosionPoint");
         anim = GetComponent<Animator>();
         halfhealth = health / 2;
+        healthBar = FindObjectOfType<Slider>();
+        healthBar.maxValue = health;
+        healthBar.value = health;
     }
 
     public override void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
+        healthBar.value = health;
         if (health <= halfhealth)
         {
             anim.SetTrigger("Stage2");
@@ -36,6 +42,7 @@ public class BossEnemy : Enemy
             Instantiate(deathEffect, explosionPoint.transform.position, explosionPoint.transform.rotation);
             Instantiate(splat, explosionPoint.transform.position, explosionPoint.transform.rotation);
             Destroy(gameObject);
+            healthBar.gameObject.SetActive(false);
         }
         Enemy randomEnemy = enemies[Random.Range(0, enemies.Length)];
         GameObject summonPoint = summonPoints[Random.Range(0, summonPoints.Length)];

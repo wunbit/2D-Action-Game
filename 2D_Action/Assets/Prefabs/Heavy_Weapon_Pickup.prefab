@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponToEquip: {fileID: 4931383557160364242, guid: 79c1ac9a76b81a5458dced5c3c97ab50,
     type: 3}
-  timeToDestroy: 3
+  timeToDestroy: 10
 --- !u!61 &5471858927315078790
 BoxCollider2D:
   m_ObjectHideFlags: 0
