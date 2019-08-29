@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Vector2 moveAmount;
     public Animator hurtFlash;
     private Animator anim;
+    private SceneTransitions sceneTransitions;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+        sceneTransitions = FindObjectOfType<SceneTransitions>();
     }
 
     void UpdateHealthUI(int currentHealth)
@@ -70,6 +72,8 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            sceneTransitions.LoadScene("Lose");
+
         }
     }
 

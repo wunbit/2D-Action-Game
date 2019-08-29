@@ -21,12 +21,15 @@ public class WaveSpawner : MonoBehaviour
     private int currentWaveIndex = 0;
     private Transform player;
     private bool finishedSpawning;
+    public bool bossKilled = false;
+    private SceneTransitions sceneTransitions;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(StartNextWave (currentWaveIndex));
+        sceneTransitions = FindObjectOfType<SceneTransitions>();
     }
 
     IEnumerator StartNextWave (int index)
@@ -71,6 +74,10 @@ public class WaveSpawner : MonoBehaviour
                 Instantiate(boss, bossSpawnPoint.position, bossSpawnPoint.rotation);
                 healthBar.SetActive(true);
             }
+        }
+        if (bossKilled == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        {
+            sceneTransitions.LoadScene("Win");
         }
     }
 }

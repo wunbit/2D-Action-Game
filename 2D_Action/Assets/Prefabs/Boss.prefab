@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b167871cf98eb64a98a642c13dfc8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 10
   speed: 15
   timeBetweenAttacks: 2
   damage: 3
@@ -623,7 +623,7 @@ MonoBehaviour:
   attackDistance: 20
   attackTime: 5
   attackSpeed: 6
-  chaseSpeed: 25
+  chaseSpeed: 22
   enemies:
   - {fileID: 6953498969745007632, guid: 57a267ed2aac42a468da783640f77104, type: 3}
   - {fileID: 3301798020237146092, guid: cb863a45edfc07f439052d20965af662, type: 3}

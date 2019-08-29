@@ -15,6 +15,7 @@ public class BossEnemy : Enemy
     private GameObject explosionPoint;
     private Animator anim;
     private Slider healthBar;
+    private WaveSpawner spawner;
     // Start is called before the first frame update
     public override void Start()
     {
@@ -26,6 +27,7 @@ public class BossEnemy : Enemy
         healthBar = FindObjectOfType<Slider>();
         healthBar.maxValue = health;
         healthBar.value = health;
+        spawner = FindObjectOfType<WaveSpawner>();
     }
 
     public override void TakeDamage(int damageAmount)
@@ -41,6 +43,7 @@ public class BossEnemy : Enemy
         {
             Instantiate(deathEffect, explosionPoint.transform.position, explosionPoint.transform.rotation);
             Instantiate(splat, explosionPoint.transform.position, explosionPoint.transform.rotation);
+            spawner.bossKilled = true;
             Destroy(gameObject);
             healthBar.gameObject.SetActive(false);
         }
