@@ -22,12 +22,5 @@ public class SceneTransitions : MonoBehaviour
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneName);
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
